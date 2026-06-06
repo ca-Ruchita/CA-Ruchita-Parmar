@@ -1,0 +1,42 @@
+
+> ca-shetal-parmar-portfolio@0.1.0 dev
+> next dev --port 5000
+
+[1G[0K  [1m[38;2;173;127;168m▲ Next.js 14.2.5[39m[22m
+  - Local:        http://localhost:5000
+
+ [32m[1m✓[22m[39m Starting...
+ [32m[1m✓[22m[39m Ready in 1534ms
+ [37m[1m○[22m[39m Compiling / ...
+ [32m[1m✓[22m[39m Compiled / in 2s (2260 modules)
+ GET / [32m200[39m in 2262ms
+ GET / [32m200[39m in 2275ms
+ GET / [32m200[39m in 49ms
+ [32m[1m✓[22m[39m Compiled in 860ms (2260 modules)
+ [32m[1m✓[22m[39m Compiled in 818ms (2274 modules)
+ [32m[1m✓[22m[39m Compiled in 209ms (2260 modules)
+ GET / [32m200[39m in 168ms
+ GET / [32m200[39m in 35ms
+ GET / [32m200[39m in 53ms
+ [32m[1m✓[22m[39m Compiled /api/contact in 447ms (1208 modules)
+SMTP send error: Error: Invalid login: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 41be03b00d2f7-c852056db34sm10453633a12.27 - gsmtp
+    at SMTPConnection._formatError (webpack-internal:///(rsc)/./node_modules/[4mnodemailer[24m/lib/smtp-connection/index.js:887:19)
+    at SMTPConnection._actionAUTHComplete (webpack-internal:///(rsc)/./node_modules/[4mnodemailer[24m/lib/smtp-connection/index.js:1695:34)
+    at SMTPConnection.eval (webpack-internal:///(rsc)/./node_modules/[4mnodemailer[24m/lib/smtp-connection/index.js:626:26)
+    at SMTPConnection._processResponse (webpack-internal:///(rsc)/./node_modules/[4mnodemailer[24m/lib/smtp-connection/index.js:1072:20)
+    at SMTPConnection._onData (webpack-internal:///(rsc)/./node_modules/[4mnodemailer[24m/lib/smtp-connection/index.js:847:14)
+    at SMTPConnection._onSocketData (webpack-internal:///(rsc)/./node_modules/[4mnodemailer[24m/lib/smtp-connection/index.js:217:44)
+[90m    at TLSSocket.emit (node:events:524:28)[39m
+[90m    at addChunk (node:internal/streams/readable:561:12)[39m
+[90m    at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)[39m
+[90m    at Readable.push (node:internal/streams/readable:392:5)[39m
+[90m    at TLSWrap.onStreamRead (node:internal/stream_base_commons:191:23)[39m
+[90m    at TLSWrap.callbackTrampoline (node:internal/async_hooks:130:17)[39m {
+  code: [32m'EAUTH'[39m,
+  response: [32m'535-5.7.8 Username and Password not accepted. For more information, go to\n'[39m +
+    [32m'535 5.7.8  https://support.google.com/mail/?p=BadCredentials 41be03b00d2f7-c852056db34sm10453633a12.27 - gsmtp'[39m,
+  responseCode: [33m535[39m,
+  command: [32m'AUTH PLAIN'[39m
+}
+ POST /api/contact [32m200[39m in 1996ms

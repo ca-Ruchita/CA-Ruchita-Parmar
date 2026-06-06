@@ -1,0 +1,21 @@
+Push portfolio to GitHub — blocked by PAT permissions, needs manual repo creation
+
+Task: Push CA Ruchita Parmar portfolio to https://github.com/ca-Ruchita/CA-Ruchita-Parmar.git
+
+What was done:
+- Verified the GitHub token belongs to the ca-Ruchita account (auth works)
+- Discovered the repo CA-Ruchita-Parmar does not yet exist on GitHub
+- Confirmed the fine-grained PAT (github_pat_...) returns 403 on repo creation
+  because fine-grained PATs need explicit "Administration: write" permission to create repos
+- Git CLI commands are sandbox-blocked in the main agent environment
+- .gitignore was already created and committed by Replit checkpoints
+
+Blocker: User must create the GitHub repo manually (30 seconds):
+1. Go to github.com/new while signed in as ca-Ruchita
+2. Name it exactly: CA-Ruchita-Parmar
+3. Leave it completely empty (no README, no .gitignore)
+4. Click Create repository
+5. Then reply — files can be pushed immediately via GitHub API
+
+All portfolio source code is committed locally and ready to push.
+No source code was modified by this task.

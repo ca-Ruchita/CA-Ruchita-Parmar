@@ -1,0 +1,327 @@
+
+> ca-shetal-parmar-portfolio@0.1.0 dev
+> next dev --port 5000
+
+[1G[0K  [1m[38;2;173;127;168m▲ Next.js 14.2.5[39m[22m
+  - Local:        http://localhost:5000
+
+ [32m[1m✓[22m[39m Starting...
+ [32m[1m✓[22m[39m Ready in 1448ms
+ [37m[1m○[22m[39m Compiling / ...
+ [32m[1m✓[22m[39m Compiled / in 2.1s (2260 modules)
+ GET / [32m200[39m in 1926ms
+ GET / [32m200[39m in 2376ms
+ GET / [32m200[39m in 34ms
+ GET / [32m200[39m in 29ms
+ [32m[1m✓[22m[39m Compiled in 661ms (2260 modules)
+ [32m[1m✓[22m[39m Compiled in 306ms (2260 modules)
+ [32m[1m✓[22m[39m Compiled in 290ms (2260 modules)
+ GET / [32m200[39m in 136ms
+ GET / [32m200[39m in 22ms
+ GET / [32m200[39m in 33ms
+ GET / [32m200[39m in 29ms
+ GET / [32m200[39m in 32ms
+ [37m[1m○[22m[39m Compiling /api/contact ...
+ [32m[1m✓[22m[39m Compiled /api/contact in 607ms (1208 modules)
+ POST /api/contact [32m200[39m in 9898ms
+ GET / [32m200[39m in 114ms
+ GET / [32m200[39m in 76ms
+ GET / [32m200[39m in 31ms
+ GET / [32m200[39m in 29ms
+ GET / [32m200[39m in 27ms
+ GET / [32m200[39m in 26ms
+ [32m[1m✓[22m[39m Compiled in 456ms (2260 modules)
+ GET / [32m200[39m in 170ms
+ [32m[1m✓[22m[39m Compiled in 459ms (2260 modules)
+ GET / [32m200[39m in 172ms
+ [32m[1m✓[22m[39m Compiled /api/contact in 218ms (1208 modules)
+ POST /api/contact [32m200[39m in 7916ms
+ GET / [32m200[39m in 118ms
+ GET / [32m200[39m in 28ms
+ [31m[1m⨯[22m[39m ./src/components/ContactSection.tsx
+Error: 
+  [38;2;255;30;30m×[0m Unexpected token `section`. Expected jsx identifier
+    ╭─[[38;2;92;157;255;1;4m/home/runner/workspace/src/components/ContactSection.tsx[0m:52:1]
+ [2m52[0m │   };
+ [2m53[0m │ 
+ [2m54[0m │   return (
+ [2m55[0m │     <section id="contact" style={{ background: "var(--bg)" }}>
+    · [38;2;246;87;248m     ───────[0m
+ [2m56[0m │       <motion.div
+ [2m57[0m │         className="section-header"
+ [2m58[0m │         initial={{ opacity: 0, y: 40 }}
+    ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/components/ContactSection.tsx
+./src/app/page.tsx
+ [37m[1m○[22m[39m Compiling /_error ...
+ [31m[1m⨯[22m[39m ./src/components/ContactSection.tsx
+Error: 
+  [38;2;255;30;30m×[0m Unexpected token `section`. Expected jsx identifier
+    ╭─[[38;2;92;157;255;1;4m/home/runner/workspace/src/components/ContactSection.tsx[0m:52:1]
+ [2m52[0m │   };
+ [2m53[0m │ 
+ [2m54[0m │   return (
+ [2m55[0m │     <section id="contact" style={{ background: "var(--bg)" }}>
+    · [38;2;246;87;248m     ───────[0m
+ [2m56[0m │       <motion.div
+ [2m57[0m │         className="section-header"
+ [2m58[0m │         initial={{ opacity: 0, y: 40 }}
+    ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/components/ContactSection.tsx
+./src/app/page.tsx
+ GET / [31m500[39m in 2000ms
+ [31m[1m⨯[22m[39m ./src/components/ContactSection.tsx
+Error: 
+  [38;2;255;30;30m×[0m Unexpected token `section`. Expected jsx identifier
+    ╭─[[38;2;92;157;255;1;4m/home/runner/workspace/src/components/ContactSection.tsx[0m:52:1]
+ [2m52[0m │   };
+ [2m53[0m │ 
+ [2m54[0m │   return (
+ [2m55[0m │     <section id="contact" style={{ background: "var(--bg)" }}>
+    · [38;2;246;87;248m     ───────[0m
+ [2m56[0m │       <motion.div
+ [2m57[0m │         className="section-header"
+ [2m58[0m │         initial={{ opacity: 0, y: 40 }}
+    ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/components/ContactSection.tsx
+./src/app/page.tsx
+ GET / [31m500[39m in 12ms
+ [31m[1m⨯[22m[39m ./src/components/ContactSection.tsx
+Error: 
+  [38;2;255;30;30m×[0m Unexpected token `section`. Expected jsx identifier
+    ╭─[[38;2;92;157;255;1;4m/home/runner/workspace/src/components/ContactSection.tsx[0m:52:1]
+ [2m52[0m │   };
+ [2m53[0m │ 
+ [2m54[0m │   return (
+ [2m55[0m │     <section id="contact" style={{ background: "var(--bg)" }}>
+    · [38;2;246;87;248m     ───────[0m
+ [2m56[0m │       <motion.div
+ [2m57[0m │         className="section-header"
+ [2m58[0m │         initial={{ opacity: 0, y: 40 }}
+    ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/components/ContactSection.tsx
+./src/app/page.tsx
+ GET / [31m500[39m in 16ms
+ GET / [31m500[39m in 13ms
+ [31m[1m⨯[22m[39m ./src/components/ContactSection.tsx
+Error: 
+  [38;2;255;30;30m×[0m Unexpected token `section`. Expected jsx identifier
+    ╭─[[38;2;92;157;255;1;4m/home/runner/workspace/src/components/ContactSection.tsx[0m:52:1]
+ [2m52[0m │   };
+ [2m53[0m │ 
+ [2m54[0m │   return (
+ [2m55[0m │     <section id="contact" style={{ background: "var(--bg)" }}>
+    · [38;2;246;87;248m     ───────[0m
+ [2m56[0m │       <motion.div
+ [2m57[0m │         className="section-header"
+ [2m58[0m │         initial={{ opacity: 0, y: 40 }}
+    ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/components/ContactSection.tsx
+./src/app/page.tsx
+ [31m[1m⨯[22m[39m ./src/components/ContactSection.tsx
+Error: 
+  [38;2;255;30;30m×[0m Unexpected token `section`. Expected jsx identifier
+    ╭─[[38;2;92;157;255;1;4m/home/runner/workspace/src/components/ContactSection.tsx[0m:52:1]
+ [2m52[0m │   };
+ [2m53[0m │ 
+ [2m54[0m │   return (
+ [2m55[0m │     <section id="contact" style={{ background: "var(--bg)" }}>
+    · [38;2;246;87;248m     ───────[0m
+ [2m56[0m │       <motion.div
+ [2m57[0m │         className="section-header"
+ [2m58[0m │         initial={{ opacity: 0, y: 40 }}
+    ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/components/ContactSection.tsx
+./src/app/page.tsx
+ [31m[1m⨯[22m[39m ./src/components/ContactSection.tsx
+Error: 
+  [38;2;255;30;30m×[0m Unexpected token `section`. Expected jsx identifier
+    ╭─[[38;2;92;157;255;1;4m/home/runner/workspace/src/components/ContactSection.tsx[0m:52:1]
+ [2m52[0m │   };
+ [2m53[0m │ 
+ [2m54[0m │   return (
+ [2m55[0m │     <section id="contact" style={{ background: "var(--bg)" }}>
+    · [38;2;246;87;248m     ───────[0m
+ [2m56[0m │       <motion.div
+ [2m57[0m │         className="section-header"
+ [2m58[0m │         initial={{ opacity: 0, y: 40 }}
+    ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/components/ContactSection.tsx
+./src/app/page.tsx
+ [31m[1m⨯[22m[39m ./src/components/ContactSection.tsx
+Error: 
+  [38;2;255;30;30m×[0m Unexpected token `section`. Expected jsx identifier
+    ╭─[[38;2;92;157;255;1;4m/home/runner/workspace/src/components/ContactSection.tsx[0m:52:1]
+ [2m52[0m │   };
+ [2m53[0m │ 
+ [2m54[0m │   return (
+ [2m55[0m │     <section id="contact" style={{ background: "var(--bg)" }}>
+    · [38;2;246;87;248m     ───────[0m
+ [2m56[0m │       <motion.div
+ [2m57[0m │         className="section-header"
+ [2m58[0m │         initial={{ opacity: 0, y: 40 }}
+    ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/components/ContactSection.tsx
+./src/app/page.tsx
+ [31m[1m⨯[22m[39m ./src/components/ContactSection.tsx
+Error: 
+  [38;2;255;30;30m×[0m Unexpected token `section`. Expected jsx identifier
+    ╭─[[38;2;92;157;255;1;4m/home/runner/workspace/src/components/ContactSection.tsx[0m:52:1]
+ [2m52[0m │   };
+ [2m53[0m │ 
+ [2m54[0m │   return (
+ [2m55[0m │     <section id="contact" style={{ background: "var(--bg)" }}>
+    · [38;2;246;87;248m     ───────[0m
+ [2m56[0m │       <motion.div
+ [2m57[0m │         className="section-header"
+ [2m58[0m │         initial={{ opacity: 0, y: 40 }}
+    ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/components/ContactSection.tsx
+./src/app/page.tsx
+ GET / [31m500[39m in 11ms
+ GET / [31m500[39m in 15ms
+ GET / [31m500[39m in 13ms
+ GET / [31m500[39m in 13ms
+ [31m[1m⨯[22m[39m ./src/components/ContactSection.tsx
+Error: 
+  [38;2;255;30;30m×[0m Unexpected token `section`. Expected jsx identifier
+    ╭─[[38;2;92;157;255;1;4m/home/runner/workspace/src/components/ContactSection.tsx[0m:52:1]
+ [2m52[0m │   };
+ [2m53[0m │ 
+ [2m54[0m │   return (
+ [2m55[0m │     <section id="contact" style={{ background: "var(--bg)" }}>
+    · [38;2;246;87;248m     ───────[0m
+ [2m56[0m │       <motion.div
+ [2m57[0m │         className="section-header"
+ [2m58[0m │         initial={{ opacity: 0, y: 40 }}
+    ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/components/ContactSection.tsx
+./src/app/page.tsx
+ GET / [31m500[39m in 10ms
+ [32m[1m✓[22m[39m Compiled /_error in 1249ms (2484 modules)
+ [37m[1m○[22m[39m Compiling /_not-found ...
+ GET / [32m200[39m in 377ms
+ [32m[1m✓[22m[39m Compiled /_not-found in 808ms (2487 modules)
+ GET /_next/static/webpack/f1cede1da6c20e57.webpack.hot-update.json [33m404[39m in 909ms
+ GET /_next/static/webpack/f1cede1da6c20e57.webpack.hot-update.json [33m404[39m in 909ms
+ [33m[1m⚠[22m[39m Fast Refresh had to perform a full reload due to a runtime error.
+ [33m[1m⚠[22m[39m Fast Refresh had to perform a full reload due to a runtime error.
+ GET / [32m200[39m in 59ms
+ GET / [32m200[39m in 44ms
+ [32m[1m✓[22m[39m Compiled /api/contact in 283ms (1249 modules)
+ POST /api/contact [32m200[39m in 7813ms
+ GET / [32m200[39m in 193ms
+ GET / [32m200[39m in 54ms
+ GET / [32m200[39m in 44ms
+ GET / [32m200[39m in 39ms
+ GET / [32m200[39m in 33ms
+ [32m[1m✓[22m[39m Compiled in 465ms (2484 modules)
+ GET / [32m200[39m in 160ms
+ GET / [32m200[39m in 35ms
+ GET / [32m200[39m in 32ms
+ [32m[1m✓[22m[39m Compiled in 495ms (2484 modules)
+ [32m[1m✓[22m[39m Compiled in 214ms (2484 modules)
+ [32m[1m✓[22m[39m Compiled in 200ms (2484 modules)
+ GET / [32m200[39m in 148ms
+ [32m[1m✓[22m[39m Compiled in 452ms (2484 modules)
+ GET / [32m200[39m in 101ms
+ [32m[1m✓[22m[39m Compiled in 189ms (2484 modules)
+ [32m[1m✓[22m[39m Compiled in 454ms (2484 modules)
+ GET / [32m200[39m in 100ms
+ [33m[1m⚠[22m[39m Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET / [32m200[39m in 36ms
+ GET / [32m200[39m in 34ms
+ [32m[1m✓[22m[39m Compiled in 501ms (2484 modules)
+ [32m[1m✓[22m[39m Compiled in 184ms (2484 modules)
+ [32m[1m✓[22m[39m Compiled in 181ms (2484 modules)
+ GET / [32m200[39m in 98ms
+ [32m[1m✓[22m[39m Compiled in 429ms (2484 modules)
+ [32m[1m✓[22m[39m Compiled in 191ms (2484 modules)
+ [32m[1m✓[22m[39m Compiled in 179ms (2484 modules)
+ GET / [32m200[39m in 94ms
+ [32m[1m✓[22m[39m Compiled /api/contact in 282ms (1248 modules)
+ POST /api/contact [32m200[39m in 7783ms
+ GET / [32m200[39m in 108ms
+ GET / [32m200[39m in 42ms
+ GET / [32m200[39m in 37ms
+ [37m[1m [22m[39m Reload env: .env
+ [32m[1m✓[22m[39m Compiled in 438ms (2484 modules)
+ GET / [32m200[39m in 97ms
+ GET / [32m200[39m in 39ms
+ GET / [32m200[39m in 36ms
+ GET / [32m200[39m in 45ms
+ GET / [32m200[39m in 36ms
+ GET / [32m200[39m in 36ms
+ GET / [32m200[39m in 37ms
+ GET / [32m200[39m in 32ms
+ GET / [32m200[39m in 33ms
+ GET / [32m200[39m in 32ms
+ GET / [32m200[39m in 36ms
+ GET / [32m200[39m in 33ms
+ GET / [32m200[39m in 31ms
+ GET / [32m200[39m in 30ms
+ GET / [32m200[39m in 32ms
+ GET / [32m200[39m in 56ms
+ GET / [32m200[39m in 31ms
+ GET / [32m200[39m in 35ms
+ GET / [32m200[39m in 31ms
+ GET / [32m200[39m in 32ms
+ GET / [32m200[39m in 29ms
+ GET / [32m200[39m in 30ms
+ GET / [32m200[39m in 29ms
+ GET / [32m200[39m in 34ms
+ GET / [32m200[39m in 28ms
+ GET / [32m200[39m in 36ms
+ GET / [32m200[39m in 31ms
+ GET / [32m200[39m in 32ms
+ GET / [32m200[39m in 31ms

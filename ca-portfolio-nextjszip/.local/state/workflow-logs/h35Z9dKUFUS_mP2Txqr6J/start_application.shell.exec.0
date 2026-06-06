@@ -1,0 +1,87 @@
+[1G[0K⠙[1G[0K
+> ca-shetal-parmar-portfolio@0.1.0 dev
+> next dev --port 5000
+
+[1G[0K⠙[1G[0K  [1m[38;2;173;127;168m▲ Next.js 14.2.5[39m[22m
+  - Local:        http://localhost:5000
+
+ [32m[1m✓[22m[39m Starting...
+ [32m[1m✓[22m[39m Ready in 3.8s
+ [37m[1m○[22m[39m Compiling / ...
+ [32m[1m✓[22m[39m Compiled / in 3.2s (2260 modules)
+ GET / [32m200[39m in 3436ms
+ GET / [32m200[39m in 39ms
+ GET / [32m200[39m in 37ms
+ GET / [32m200[39m in 42ms
+ GET / [32m200[39m in 41ms
+ GET / [32m200[39m in 35ms
+ [32m[1m✓[22m[39m Compiled /api/contact in 489ms (1208 modules)
+SMTP send error: Error: Invalid login: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 41be03b00d2f7-c85df0b56c5sm6959470a12.27 - gsmtp
+    at SMTPConnection._formatError (webpack-internal:///(rsc)/./node_modules/[4mnodemailer[24m/lib/smtp-connection/index.js:887:19)
+    at SMTPConnection._actionAUTHComplete (webpack-internal:///(rsc)/./node_modules/[4mnodemailer[24m/lib/smtp-connection/index.js:1695:34)
+    at SMTPConnection.eval (webpack-internal:///(rsc)/./node_modules/[4mnodemailer[24m/lib/smtp-connection/index.js:626:26)
+    at SMTPConnection._processResponse (webpack-internal:///(rsc)/./node_modules/[4mnodemailer[24m/lib/smtp-connection/index.js:1072:20)
+    at SMTPConnection._onData (webpack-internal:///(rsc)/./node_modules/[4mnodemailer[24m/lib/smtp-connection/index.js:847:14)
+    at SMTPConnection._onSocketData (webpack-internal:///(rsc)/./node_modules/[4mnodemailer[24m/lib/smtp-connection/index.js:217:44)
+[90m    at TLSSocket.emit (node:events:524:28)[39m
+[90m    at addChunk (node:internal/streams/readable:561:12)[39m
+[90m    at readableAddChunkPushByteMode (node:internal/streams/readable:512:3)[39m
+[90m    at Readable.push (node:internal/streams/readable:392:5)[39m
+[90m    at TLSWrap.onStreamRead (node:internal/stream_base_commons:191:23)[39m
+[90m    at TLSWrap.callbackTrampoline (node:internal/async_hooks:130:17)[39m {
+  code: [32m'EAUTH'[39m,
+  response: [32m'535-5.7.8 Username and Password not accepted. For more information, go to\n'[39m +
+    [32m'535 5.7.8  https://support.google.com/mail/?p=BadCredentials 41be03b00d2f7-c85df0b56c5sm6959470a12.27 - gsmtp'[39m,
+  responseCode: [33m535[39m,
+  command: [32m'AUTH PLAIN'[39m
+}
+ POST /api/contact [32m200[39m in 2300ms
+ GET / [32m200[39m in 138ms
+ [32m[1m✓[22m[39m Compiled in 1427ms (2260 modules)
+ [32m[1m✓[22m[39m Compiled in 269ms (2260 modules)
+ [32m[1m✓[22m[39m Compiled in 689ms (2274 modules)
+ [32m[1m✓[22m[39m Compiled in 296ms (2274 modules)
+ [32m[1m✓[22m[39m Compiled in 1185ms (2260 modules)
+ [32m[1m✓[22m[39m Compiled in 340ms (2260 modules)
+ [32m[1m✓[22m[39m Compiled in 360ms (2274 modules)
+ GET / [32m200[39m in 136ms
+ GET / [32m200[39m in 63ms
+ [37m[1m○[22m[39m Compiling /api/contact ...
+ [32m[1m✓[22m[39m Compiled /api/contact in 730ms (1208 modules)
+Contact route error: Invalid login: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials d2e1a72fcca58-842828d6bd1sm9573950b3a.44 - gsmtp
+ POST /api/contact [31m503[39m in 2302ms
+Contact route error: Invalid login: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 41be03b00d2f7-c85df04a0e9sm5922130a12.13 - gsmtp
+ POST /api/contact [31m503[39m in 1532ms
+ [32m[1m✓[22m[39m Compiled in 1421ms (2260 modules)
+ [32m[1m✓[22m[39m Compiled in 335ms (2274 modules)
+ [32m[1m✓[22m[39m Compiled in 391ms (2274 modules)
+ [32m[1m✓[22m[39m Compiled in 234ms (2260 modules)
+ GET / [32m200[39m in 188ms
+ [32m[1m✓[22m[39m Compiled in 584ms (2274 modules)
+ [32m[1m✓[22m[39m Compiled in 312ms (2260 modules)
+ GET / [32m200[39m in 161ms
+ GET / [32m200[39m in 31ms
+ [32m[1m✓[22m[39m Compiled in 614ms (2274 modules)
+ [32m[1m✓[22m[39m Compiled in 325ms (2260 modules)
+ GET / [32m200[39m in 178ms
+ GET / [32m200[39m in 47ms
+ [37m[1m○[22m[39m Compiling /api/contact ...
+ [32m[1m✓[22m[39m Compiled /api/contact in 600ms (1208 modules)
+Contact route error: Invalid login: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials d2e1a72fcca58-84282375f2dsm8741002b3a.19 - gsmtp
+ POST /api/contact [31m503[39m in 2189ms
+ GET / [32m200[39m in 166ms
+ [32m[1m✓[22m[39m Compiled in 652ms (2260 modules)
+ [32m[1m✓[22m[39m Compiled in 275ms (2260 modules)
+ [32m[1m✓[22m[39m Compiled in 568ms (2260 modules)
+ [33m[1m⚠[22m[39m Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[?25h
+[1G[0K⠙[1G[0K[1mnpm[22m [96mnotice[39m
+[1mnpm[22m [96mnotice[39m New [31mmajor[39m version of npm available! [31m10.8.2[39m -> [34m11.16.0[39m
+[1mnpm[22m [96mnotice[39m Changelog: [34mhttps://github.com/npm/cli/releases/tag/v11.16.0[39m
+[1mnpm[22m [96mnotice[39m To update run: [4mnpm install -g npm@11.16.0[24m
+[1mnpm[22m [96mnotice[39m
+[1G[0K⠙[1G[0K
