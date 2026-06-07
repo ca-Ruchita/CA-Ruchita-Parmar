@@ -50,79 +50,92 @@ export default function AuditRisk() {
   const fmt = (n: number) => '₹' + Math.round(n).toLocaleString('en-IN');
 
   return (
-    <div className="calc-body">
-      <div className="calc-split">
-        <div className="calc-inputs">
-          <div className="calc-section-title">Risk Factor Scoring (0–10)</div>
-          {FACTORS.map(f => (
-            <div key={f.key} className="calc-input-group">
-              <label>{f.label} <span style={{ fontSize: '0.7rem', color: 'var(--text-muted)' }}>— {f.desc}</span></label>
-              <div className="calc-input-row">
-                <input type="range" min={0} max={10} step={1} value={scores[f.key]} onChange={e => setScore(f.key, +e.target.value)} className="calc-range" />
-                <span className="calc-val-badge" style={{ minWidth: 32 }}>{scores[f.key]}/10</span>
+    /* Standard structural container layout forcing code cleanly beneath absolute headers */
+    <div style={{ 
+      width: '100%', 
+      height: '100vh',
+      maxHeight: '100vh', 
+      overflowY: 'auto', 
+      paddingTop: '80px', /* Safe top alignment clearance */
+      paddingBottom: '40px',
+      boxSizing: 'border-box',
+      position: 'relative',
+      zIndex: 1
+    }}>
+      <div className="calc-body" style={{ marginTop: 0, paddingTop: 0 }}>
+        <div className="calc-split">
+          <div className="calc-inputs">
+            <div className="calc-section-title">Risk Factor Scoring (0–10)</div>
+            {FACTORS.map(f => (
+              <div key={f.key} className="calc-input-group">
+                <label>{f.label} <span style={{ fontSize: '0.7rem', color: 'var(--text-muted)' }}>— {f.desc}</span></label>
+                <div className="calc-input-row">
+                  <input type="range" min={0} max={10} step={1} value={scores[f.key]} onChange={e => setScore(f.key, +e.target.value)} className="calc-range" />
+                  <span className="calc-val-badge" style={{ minWidth: 32 }}>{scores[f.key]}/10</span>
+                </div>
+              </div>
+            ))}
+
+            <div className="calc-section-title" style={{ marginTop: '1.5rem' }}>Materiality Calculation</div>
+            <div className="calc-input-group">
+              <label>Materiality Basis</label>
+              <div className="rate-pills">
+                {MATERIALITY_BASIS.map((b, i) => (
+                  <button key={i} className={`rate-pill ${basis === i ? 'active' : ''}`} onClick={() => setBasis(i)}>{b.label} ({b.pct}%)</button>
+                ))}
               </div>
             </div>
-          ))}
-
-          <div className="calc-section-title" style={{ marginTop: '1.5rem' }}>Materiality Calculation</div>
-          <div className="calc-input-group">
-            <label>Materiality Basis</label>
-            <div className="rate-pills">
-              {MATERIALITY_BASIS.map((b, i) => (
-                <button key={i} className={`rate-pill ${basis === i ? 'active' : ''}`} onClick={() => setBasis(i)}>{b.label} ({b.pct}%)</button>
-              ))}
+            <div className="calc-input-group">
+              <label>{MATERIALITY_BASIS[basis].label} Amount (₹)</label>
+              <input type="number" className="calc-text-input" value={basisAmount} onChange={e => setBasisAmount(+e.target.value)} min={0} />
             </div>
           </div>
-          <div className="calc-input-group">
-            <label>{MATERIALITY_BASIS[basis].label} Amount (₹)</label>
-            <input type="number" className="calc-text-input" value={basisAmount} onChange={e => setBasisAmount(+e.target.value)} min={0} />
-          </div>
-        </div>
 
-        <div className="calc-results">
-          <div className="calc-result-card main" style={{ borderColor: color + '66' }}>
-            <div className="result-label">Composite Risk Score</div>
-            <div className="risk-score-display" style={{ color }}>
-              <div className="risk-pct">{pct}%</div>
-              <div className="risk-level" style={{ background: color + '22', borderColor: color }}>{level} RISK</div>
-            </div>
-            <div className="risk-desc">{desc}</div>
-            <div className="risk-bar-wrap">
-              <div className="risk-bar-bg">
-                <div className="risk-bar-fill" style={{ width: `${pct}%`, background: color }} />
+          <div className="calc-results">
+            <div className="calc-result-card main" style={{ borderColor: color + '66' }}>
+              <div className="result-label">Composite Risk Score</div>
+              <div className="risk-score-display" style={{ color }}>
+                <div className="risk-pct">{pct}%</div>
+                <div className="risk-level" style={{ background: color + '22', borderColor: color }}>{level} RISK</div>
               </div>
-              <div className="risk-bar-labels">
-                <span style={{ color: '#2db88a' }}>Low</span>
-                <span style={{ color: 'var(--accent)' }}>Medium</span>
-                <span style={{ color: '#e09870' }}>High</span>
-                <span style={{ color: '#e05580' }}>Critical</span>
+              <div className="risk-desc">{desc}</div>
+              <div className="risk-bar-wrap">
+                <div className="risk-bar-bg">
+                  <div className="risk-bar-fill" style={{ width: `${pct}%`, background: color }} />
+                </div>
+                <div className="risk-bar-labels">
+                  <span style={{ color: '#2db88a' }}>Low</span>
+                  <span style={{ color: 'var(--accent)' }}>Medium</span>
+                  <span style={{ color: '#e09870' }}>High</span>
+                  <span style={{ color: '#e05580' }}>Critical</span>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div className="calc-info-box">
-            <div className="result-label" style={{ marginBottom: 8 }}>Materiality Thresholds</div>
-            <div className="result-rows">
-              <div className="result-row"><span>Overall Materiality</span><strong>{fmt(materiality)}</strong></div>
-              <div className="result-row"><span>Performance Materiality (75%)</span><strong>{fmt(perfMateriality)}</strong></div>
-              <div className="result-row"><span>Clearly Trivial (5%)</span><strong>{fmt(clearly)}</strong></div>
+            <div className="calc-info-box">
+              <div className="result-label" style={{ marginBottom: 8 }}>Materiality Thresholds</div>
+              <div className="result-rows">
+                <div className="result-row"><span>Overall Materiality</span><strong>{fmt(materiality)}</strong></div>
+                <div className="result-row"><span>Performance Materiality (75%)</span><strong>{fmt(perfMateriality)}</strong></div>
+                <div className="result-row"><span>Clearly Trivial (5%)</span><strong>{fmt(clearly)}</strong></div>
+              </div>
             </div>
-          </div>
 
-          {isClient && (
-            <div className="calc-charts">
-              <div className="chart-title">Risk Factor Spider Chart</div>
-              <ResponsiveContainer width="100%" height={220}>
-                <RadarChart data={radarData}>
-                  <PolarGrid stroke="var(--border)" />
-                  <PolarAngleAxis dataKey="subject" tick={{ fontSize: 9, fill: 'var(--text-muted)' }} />
-                  <PolarRadiusAxis angle={30} domain={[0, 10]} tick={{ fontSize: 8, fill: 'var(--text-muted)' }} />
-                  <Radar name="Risk Score" dataKey="score" stroke={color} fill={color} fillOpacity={0.25} />
-                  <Tooltip contentStyle={{ background: 'var(--surface)', border: '1px solid var(--border)', borderRadius: 8 }} />
-                </RadarChart>
-              </ResponsiveContainer>
-            </div>
-          )}
+            {isClient && (
+              <div className="calc-charts">
+                <div className="chart-title">Risk Factor Spider Chart</div>
+                <ResponsiveContainer width="100%" height={220}>
+                  <RadarChart data={radarData}>
+                    <PolarGrid stroke="var(--border)" />
+                    <PolarAngleAxis dataKey="subject" tick={{ fontSize: 9, fill: 'var(--text-muted)' }} />
+                    <PolarRadiusAxis angle={30} domain={[0, 10]} tick={{ fontSize: 8, fill: 'var(--text-muted)' }} />
+                    <Radar name="Risk Score" dataKey="score" stroke={color} fill={color} fillOpacity={0.25} />
+                    <Tooltip contentStyle={{ background: 'var(--surface)', border: '1px solid var(--border)', borderRadius: 8 }} />
+                  </RadarChart>
+                </ResponsiveContainer>
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </div>

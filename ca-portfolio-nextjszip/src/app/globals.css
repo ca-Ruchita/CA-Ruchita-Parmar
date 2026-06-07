@@ -1276,6 +1276,7 @@ footer a:hover { color: var(--accent); }
   display: flex;
   flex-direction: column;
   min-height: 90vh;
+  scroll-margin-top: 72px;
 }
 .calc-inline-header {
   display: flex;

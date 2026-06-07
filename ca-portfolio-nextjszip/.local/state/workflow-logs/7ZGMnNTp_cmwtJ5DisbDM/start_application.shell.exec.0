@@ -6,8 +6,4 @@
   - Local:        http://localhost:5000
 
  [32m[1m✓[22m[39m Starting...
- [32m[1m✓[22m[39m Ready in 2.9s
- [37m[1m○[22m[39m Compiling / ...
- [32m[1m✓[22m[39m Compiled / in 3.1s (2260 modules)
- GET / [32m200[39m in 3404ms
- GET / [32m200[39m in 56ms
+ [32m[1m✓[22m[39m Ready in 3.9s

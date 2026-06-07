@@ -49,12 +49,15 @@ export default function CalculatorModal({ toolId, onClose }: Props) {
     return () => { clearTimeout(t); document.removeEventListener('mousedown', handler); };
   }, [toolId, onClose]);
 
-  // Scroll into view when tool opens
+  // Scroll into view when tool opens — offset for fixed 64px navbar
   useEffect(() => {
     if (toolId && inlineRef.current) {
       setTimeout(() => {
-        inlineRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }, 80);
+        const el = inlineRef.current;
+        if (!el) return;
+        const top = el.getBoundingClientRect().top + window.scrollY - 72;
+        window.scrollTo({ top, behavior: 'smooth' });
+      }, 120);
     }
   }, [toolId]);
 

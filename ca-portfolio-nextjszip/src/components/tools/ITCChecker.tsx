@@ -35,52 +35,65 @@ export default function ITCChecker() {
   );
 
   return (
-    <div className="calc-body">
-      <div className="itc-layout">
-        <div className="itc-controls">
-          <input
-            className="calc-text-input"
-            placeholder="Search expense category…"
-            value={search}
-            onChange={e => setSearch(e.target.value)}
-            style={{ marginBottom: '1rem' }}
-          />
-          <div className="itc-filters">
-            {(['all', 'full', 'partial', 'blocked'] as const).map(f => (
-              <button
-                key={f}
-                className={`itc-filter ${filterStatus === f ? 'active' : ''}`}
-                onClick={() => setFilterStatus(f)}
-                style={filterStatus === f && f !== 'all' ? { background: STATUS_COLOR[f] + '22', color: STATUS_COLOR[f], borderColor: STATUS_COLOR[f] } : {}}
-              >
-                {f === 'all' ? 'All' : STATUS_LABEL[f]}
+    /* Uniform container layout wrapping to guarantee visibility below absolute layouts */
+    <div style={{ 
+      width: '100%', 
+      height: '100vh',
+      maxHeight: '100vh', 
+      overflowY: 'auto', 
+      paddingTop: '80px', /* Safe absolute position push */
+      paddingBottom: '40px',
+      boxSizing: 'border-box',
+      position: 'relative',
+      zIndex: 1
+    }}>
+      <div className="calc-body" style={{ marginTop: 0, paddingTop: 0 }}>
+        <div className="itc-layout">
+          <div className="itc-controls">
+            <input
+              className="calc-text-input"
+              placeholder="Search expense category…"
+              value={search}
+              onChange={e => setSearch(e.target.value)}
+              style={{ marginBottom: '1rem' }}
+            />
+            <div className="itc-filters">
+              {([ 'all', 'full', 'partial', 'blocked' ] as const).map(f => (
+                <button
+                  key={f}
+                  className={`itc-filter ${filterStatus === f ? 'active' : ''}`}
+                  onClick={() => setFilterStatus(f)}
+                  style={filterStatus === f && f !== 'all' ? { background: STATUS_COLOR[f] + '22', color: STATUS_COLOR[f], borderColor: STATUS_COLOR[f] } : {}}
+                >
+                  {f === 'all' ? 'All' : STATUS_LABEL[f]}
+                </button>
+              ))}
+            </div>
+
+            <div className="itc-summary">
+              <span style={{ color: STATUS_COLOR.full }}>✅ {CATEGORIES.filter(c => c.eligible === 'full').length} Eligible</span>
+              <span style={{ color: STATUS_COLOR.partial }}>⚠️ {CATEGORIES.filter(c => c.eligible === 'partial').length} Conditional</span>
+              <span style={{ color: STATUS_COLOR.blocked }}>❌ {CATEGORIES.filter(c => c.eligible === 'blocked').length} Blocked</span>
+            </div>
+          </div>
+
+          <div className="itc-list">
+            {filtered.map((cat, i) => (
+              <button key={i} className={`itc-item ${selected?.name === cat.name ? 'selected' : ''}`} onClick={() => setSelected(selected?.name === cat.name ? null : cat)}>
+                <div className="itc-item-top">
+                  <span className="itc-cat-name">{cat.name}</span>
+                  <span className="itc-status-badge" style={{ background: STATUS_COLOR[cat.eligible] + '22', color: STATUS_COLOR[cat.eligible], borderColor: STATUS_COLOR[cat.eligible] }}>
+                    {cat.eligible === 'full' ? '✅ Eligible' : cat.eligible === 'partial' ? '⚠️ Conditional' : '❌ Blocked'}
+                  </span>
+                </div>
+                <div className="itc-section">Section: {cat.section}</div>
+                {selected?.name === cat.name && (
+                  <div className="itc-note">{cat.note}</div>
+                )}
               </button>
             ))}
+            {filtered.length === 0 && <div className="cc-empty">No categories match your search</div>}
           </div>
-
-          <div className="itc-summary">
-            <span style={{ color: STATUS_COLOR.full }}>✅ {CATEGORIES.filter(c => c.eligible === 'full').length} Eligible</span>
-            <span style={{ color: STATUS_COLOR.partial }}>⚠️ {CATEGORIES.filter(c => c.eligible === 'partial').length} Conditional</span>
-            <span style={{ color: STATUS_COLOR.blocked }}>❌ {CATEGORIES.filter(c => c.eligible === 'blocked').length} Blocked</span>
-          </div>
-        </div>
-
-        <div className="itc-list">
-          {filtered.map((cat, i) => (
-            <button key={i} className={`itc-item ${selected?.name === cat.name ? 'selected' : ''}`} onClick={() => setSelected(selected?.name === cat.name ? null : cat)}>
-              <div className="itc-item-top">
-                <span className="itc-cat-name">{cat.name}</span>
-                <span className="itc-status-badge" style={{ background: STATUS_COLOR[cat.eligible] + '22', color: STATUS_COLOR[cat.eligible], borderColor: STATUS_COLOR[cat.eligible] }}>
-                  {cat.eligible === 'full' ? '✅ Eligible' : cat.eligible === 'partial' ? '⚠️ Conditional' : '❌ Blocked'}
-                </span>
-              </div>
-              <div className="itc-section">Section: {cat.section}</div>
-              {selected?.name === cat.name && (
-                <div className="itc-note">{cat.note}</div>
-              )}
-            </button>
-          ))}
-          {filtered.length === 0 && <div className="cc-empty">No categories match your search</div>}
         </div>
       </div>
     </div>

@@ -19,3 +19,12 @@
  GET / [32m200[39m in 201ms
  [32m[1m✓[22m[39m Compiled in 513ms (2260 modules)
  GET / [32m200[39m in 181ms
+ GET / [32m200[39m in 66ms
+ GET / [32m200[39m in 31ms
+ GET / [32m200[39m in 35ms
+ GET / [32m200[39m in 31ms
+ GET / [32m200[39m in 31ms
+ GET / [32m200[39m in 28ms
+ GET / [32m200[39m in 32ms
+ GET / [32m200[39m in 30ms
+ GET / [32m200[39m in 29ms

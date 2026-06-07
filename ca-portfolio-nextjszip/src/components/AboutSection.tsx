@@ -54,7 +54,7 @@ export default function AboutSection() {
         <RevealWrap className="about-photo-wrap" delay={0.1}>
           <div className="about-photo tilt-card">
             <img
-              src="/profile.jpg"
+              src="/profile-about.jpg"
               alt="CA Ruchita Parmar"
               style={{
                 width: "100%",
