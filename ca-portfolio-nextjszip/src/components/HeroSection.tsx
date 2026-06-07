@@ -115,7 +115,12 @@ export default function HeroSection({ onSchedule }: Props) {
             <a href="#" className="cta-link">
               LinkedIn ↗
             </a>
-            <a href="#" className="cta-link">
+            <a
+              href="https://drive.google.com/file/d/19_RO8bXjjPs9C2K9vM9XEjs1oPNIz2pR/view?usp=drivesdk"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="cta-link"
+            >
               Download CV ↗
             </a>
           </motion.div>
