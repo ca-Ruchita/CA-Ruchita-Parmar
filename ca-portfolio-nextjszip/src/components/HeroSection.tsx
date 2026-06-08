@@ -116,7 +116,7 @@ export default function HeroSection({ onSchedule }: Props) {
               LinkedIn ↗
             </a>
             <a
-              href="https://drive.google.com/file/d/19_RO8bXjjPs9C2K9vM9XEjs1oPNIz2pR/view?usp=drivesdk"
+              href="https://drive.google.com/file/d/1qTohW0Pvc_yizuYEEwQnPvD0y5kuR9UQ/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="cta-link"
