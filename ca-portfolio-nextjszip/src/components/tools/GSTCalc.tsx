@@ -182,7 +182,7 @@ export default function GSTCalc() {
                       ))}
                     </Pie>
                     <Tooltip
-                      formatter={(v: number) => fmt(v)}
+                      formatter={(v: any) => (typeof v === "number" ? fmt(v) : v)}
                       contentStyle={{
                         background: "var(--surface)",
                         border: "1px solid var(--border)",
@@ -207,7 +207,7 @@ export default function GSTCalc() {
                       tick={{ fontSize: 10, fill: "var(--text-muted)" }}
                     />
                     <Tooltip
-                      formatter={(v: number) => fmt(v)}
+                      formatter={(v: any) => (typeof v === "number" ? fmt(v) : v)}
                       contentStyle={{
                         background: "var(--surface)",
                         border: "1px solid var(--border)",
