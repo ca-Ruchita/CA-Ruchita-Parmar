@@ -219,7 +219,7 @@ export default function BusinessValuation() {
                       width={80}
                     />
                     <Tooltip
-                      formatter={(v: number) => fmt(v)}
+                      formatter={(v: any) => (typeof v === "number" ? fmt(v) : v)}
                       contentStyle={{
                         background: "var(--surface)",
                         border: "1px solid var(--border)",
@@ -266,7 +266,7 @@ export default function BusinessValuation() {
                       width={80}
                     />
                     <Tooltip
-                      formatter={(v: number) => fmt(v)}
+                      formatter={(v: any) => (typeof v === "number" ? fmt(v) : v)}
                       contentStyle={{
                         background: "var(--surface)",
                         border: "1px solid var(--border)",
