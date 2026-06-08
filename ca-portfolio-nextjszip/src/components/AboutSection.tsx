@@ -37,7 +37,7 @@ const STATS = [
 ];
 
 const QUAL = [
-  { title: "CA", sub: "All levels · 1st attempt" },
+  { title: "CA", sub: "All levels " },
   { title: "GST", sub: "Advisory & Litigation" },
   { title: "ICAI", sub: "Member · Active" },
 ];
